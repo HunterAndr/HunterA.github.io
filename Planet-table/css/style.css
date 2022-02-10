@@ -18,11 +18,15 @@ table {
     width:100%;
     max-width:1920px;
 }
-
+col:nth-child(3) {
+  border:2px solid #000;
+}
 td, th {
   border: 1px solid rgb(190,190,190);
   padding: .625rem 1.25rem;
+  
 }
+
 
 th {
   background-color: rgb(235,235,235);
@@ -40,9 +44,7 @@ tr:nth-child(odd) td {
   background-color: rgb(245,245,245);
 }
 
-col:nth-child(2) {
-    border:2px solid #000;
-}
+
 
 caption {
   padding: .625rem;
