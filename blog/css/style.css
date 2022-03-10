@@ -1,0 +1,240 @@
+/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
+
+        /* 
+        
+        Spacing 
+
+            - padding (shorthand and/or specific properties like padding-bottom, etc.)
+
+            - margin, (shorthand and/or specific properties like margin-top, etc.)
+
+            - letter-spacing, word-spacing, line-height
+
+            - width, max-width, min-width
+            - height, max-height, min-height
+
+        Typography 
+
+            - font-family, font-size, font-style, font-weight
+
+            - text-decoration, text-align
+
+            - color
+
+            - text-shadow, text-transform
+
+        Box, Layout and Border 
+
+            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
+
+            - box-shadow
+
+            - display, float, align-items, align-content
+
+            - grid-template-columns, grid-column-gap
+
+            - transform
+
+        Other
+
+            - :nth()-child (to target specific child elements)
+
+            - :focus, :hover, :active (to target link states)
+
+            - @font-face or @import (to import typefaces)
+
+        */
+
+
+/* ------ START WRITING YOUR CODE BELOW ------ */
+@font-face {
+    font-family:lato;
+    src: url(../fonts/sans-serif/lato-regular.ttf);
+}
+@font-face {
+    font-family:rozhaone;
+    src: url(../fonts/serif/rozhaone-regular.ttf);
+}
+@font-face {
+    font-family:robotoslab;
+    src: url(../fonts/serif/robotoslab-regular.ttf);
+}
+
+body {
+    font-family: lato;
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+main {
+    margin: 4rem;
+}
+
+.main-section {
+    display: flex;
+}
+
+footer {
+    margin: 6rem 4rem 2rem 4rem;
+}
+
+.footer-left {
+    float: left;
+}
+
+.footer-right {
+    float: right;
+    text-align: right;
+}
+
+footer a {
+    text-decoration: none;
+    color: #7d8a84;
+    font-family: robotoslab;
+}
+
+.section-left {
+    float: left;
+    margin-right: 1rem;
+}
+
+.main-section article {
+    flex: 4;
+    padding-right: 2.5rem;
+}
+
+.main-section aside {
+    flex: 1;
+    padding-left: 2.5rem;
+    border-left: 0.125rem solid #000;
+}
+
+.main-section aside h3 {
+    margin: 0 0 1rem 0;
+}
+
+.main-section aside img {
+    width: 100%;
+}
+
+.expand {
+    display: block;
+    font-size: 0.25rem;
+    text-decoration: none;
+}
+
+.main-section aside hr {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    height: 0.125rem;
+    border: none;
+    background-color: #000;
+    color: #000;
+}
+
+.main-section .button {
+    cursor: pointer;
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    background-color: #a524be;
+    color: #d5d825;
+    border-radius: 0.75rem;
+    font-family: rozhaone;
+    font-weight: bold;
+    border: none;
+    box-shadow: 0.0625rem 0.0625rem 0.25rem 0.0625rem #000;
+}
+
+time {
+    font-size: 0.75rem;
+    font-style: italic;
+}
+
+.subsection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.5rem;
+    margin: 3rem ;
+}
+
+.subsection figure {
+    margin: 0;
+}
+
+.subsection figure img {
+    width: 100%;
+}
+
+.subsection figure figcaption {
+    background-color: #eeeedd;
+    padding: 0.75rem;
+    font-size: 0.75rem;
+}
+
+nav {
+    border-top: 0.125rem solid #000;
+    border-bottom: 0.125rem solid #000;
+}
+
+nav ul {
+    padding: 1rem 1.5rem;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #1e6dce;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 2.5rem;
+}
+
+nav ul li.selected {
+    transform: rotate(5deg)
+}
+
+nav ul li.selected a {
+    text-decoration: line-through;
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: #000;
+}
+
+header {
+    padding-bottom: 4rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+header h1 {
+    transform: rotate(-5deg);
+    display: inline-block;
+    font-size: 4rem;
+    color: #333;
+    text-shadow: 0.0625rem 0.0625rem 0.125rem #000;
+}
+
+header h1 span {
+    text-transform: uppercase;
+    background-color: #83344d;
+    color: #eeeedd;
+    border-radius: 2rem 0.5rem;
+    padding: 0 1rem;
+    font-family: rozhaone;
+    line-height: 2rem;
+    box-shadow: 0.0625rem 0.0625rem 0.25rem 0.0625rem #000;
+}
